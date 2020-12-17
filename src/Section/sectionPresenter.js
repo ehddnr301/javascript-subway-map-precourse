@@ -47,6 +47,8 @@ export const displaySelectedLine = (lineName, stations) => {
   } else {
     appendChilds([selectedLineContainer]);
   }
+
+  return true;
 };
 
 const initialSectionUtil = () => {

@@ -40,7 +40,7 @@
 
 #### Container
 
-- [ ] 구간 추가
+- [x] 구간 추가
 - [ ] 구간 삭제
 
 ### validation
