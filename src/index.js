@@ -1,3 +1,4 @@
+import lineManager from "./Line/index.js";
 import stationManager from "./Station/index.js";
 
 const menu = document.getElementsByClassName("menu")[0];
@@ -13,6 +14,7 @@ const init = () => {
   const mapManagerButton = document.getElementById("map-print-manager-button");
 
   stationManagerButton.addEventListener("click", stationManager);
+  lineManagerButton.addEventListener("click", lineManager);
 };
 
 if (menu) {

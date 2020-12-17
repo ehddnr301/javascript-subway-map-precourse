@@ -11,3 +11,7 @@ td {
 input {
   margin-right: 5px;
 }
+
+.margin {
+  margin: 10px 0;
+}

@@ -45,8 +45,7 @@ const initialStationUtil = () => {
   const table = createTable(WORDS.STATION.LIST_COL_NAMES);
   const elements = [inputTitle, input, button, header, table];
 
-  const initialDiv = createDivContainer(elements);
-  appendChilds([initialDiv]);
+  appendChilds(elements);
 
   return true;
 };

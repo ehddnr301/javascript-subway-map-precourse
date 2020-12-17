@@ -1,7 +1,8 @@
-export const createDivContainer = (elements, idValue = "") => {
+export const createDivContainer = (elements, classValue = "", idValue = "") => {
   const div = document.createElement("div");
 
   div.setAttribute("id", idValue);
+  div.setAttribute("class", classValue);
 
   elements.forEach((element) => {
     div.appendChild(element);
@@ -102,4 +103,30 @@ export const createDataAttribute = (element, data, value) => {
   element.setAttribute(`data-${data}`, value);
 
   return element;
+};
+
+export const createLabel = (forValue, text) => {
+  const label = document.createElement("label");
+
+  label.setAttribute("for", forValue);
+  label.innerText = text;
+
+  return label;
+};
+
+export const createSelect = (idValue, optionValues) => {
+  const select = document.createElement("select");
+
+  optionValues.forEach((optionValue) => {
+    const option = document.createElement("option");
+
+    option.value = optionValue;
+    option.innerText = optionValue;
+
+    select.appendChild(option);
+  });
+
+  select.setAttribute("id", idValue);
+
+  return select;
 };
