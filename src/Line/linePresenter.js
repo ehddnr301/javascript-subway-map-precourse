@@ -11,6 +11,7 @@ import {
   createTable,
 } from "../utils/HTMLElement.js";
 import { loadLocalStorage } from "../utils/localStorage.js";
+import lineContainer from "./lineContainer.js";
 
 const createInputBox = () => {
   const inputTitle = createDiv(WORDS.LINE.INPUT_TITLE);
@@ -76,6 +77,10 @@ const linePresenter = () => {
   clearChilds();
 
   const isInitialDisplayed = initialLineUtil();
+
+  if (isInitialDisplayed) {
+    lineContainer();
+  }
 };
 
 export default linePresenter;

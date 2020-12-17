@@ -27,7 +27,7 @@
 
 #### Container
 
-- [ ] 노선 추가
+- [x] 노선 추가 - `lineAddClicked`
 - [ ] 노선 삭제
 
 ### Section - 구간 관련
