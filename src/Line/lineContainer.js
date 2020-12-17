@@ -4,6 +4,7 @@ import {
   loadLocalStorage,
   saveLocalStorage,
 } from "../utils/localStorage.js";
+import { displayLines } from "./linePresenter.js";
 
 const lineAddClicked = () => {
   const lineName = document.getElementById("line-name-input").value;
@@ -18,12 +19,16 @@ const lineAddClicked = () => {
 
   clearLocalStorage(LS_KEY.LINE);
   saveLocalStorage(LS_KEY.LINE, currentLines);
+  displayLines(currentLines);
 };
 
 const lineContainer = () => {
   const lineAddButton = document.getElementById("line-add-button");
+  const currentLines = loadLocalStorage(LS_KEY.LINE) || [];
 
   lineAddButton.addEventListener("click", lineAddClicked);
+
+  const isDisplayed = displayLines(currentLines);
 };
 
 export default lineContainer;

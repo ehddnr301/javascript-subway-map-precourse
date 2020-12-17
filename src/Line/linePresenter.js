@@ -1,7 +1,9 @@
-import { LS_KEY, WORDS } from "../constants/index.js";
-import { clearChilds, appendChilds } from "../utils/display.js";
+import { DATA, LS_KEY, WORDS } from "../constants/index.js";
+import { clearChilds, appendChilds, clearTableBody } from "../utils/display.js";
 import {
   createButton,
+  createDataAttribute,
+  createDeleteButtonTd,
   createDiv,
   createDivContainer,
   createHeader,
@@ -9,9 +11,42 @@ import {
   createLabel,
   createSelect,
   createTable,
+  createTableData,
+  createTableRow,
 } from "../utils/HTMLElement.js";
 import { loadLocalStorage } from "../utils/localStorage.js";
 import lineContainer from "./lineContainer.js";
+
+const createLineTr = (line) => {
+  const lineName = Object.keys(line)[0];
+  const stations = Object.values(line)[0];
+  const startStation = stations[0];
+  const endStation = stations[stations.length - 1];
+  const lineTd = createTableData(lineName);
+  const startStationTd = createTableData(startStation);
+  const endStationTd = createTableData(endStation);
+  const deleteButton = createButton(
+    WORDS.LINE.DELETE_BUTTON,
+    "",
+    "line-delete-button"
+  );
+  const dataButton = createDataAttribute(deleteButton, DATA.LINE);
+  const deleteTd = createDeleteButtonTd(dataButton);
+  const tr = createTableRow([lineTd, startStationTd, endStationTd, deleteTd]);
+
+  return tr;
+};
+
+export const displayLines = (currentLines) => {
+  const tbody = clearTableBody();
+
+  currentLines.forEach((line) => {
+    const tr = createLineTr(line);
+    tbody.appendChild(tr);
+  });
+
+  return true;
+};
 
 const createInputBox = () => {
   const inputTitle = createDiv(WORDS.LINE.INPUT_TITLE);

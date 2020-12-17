@@ -22,7 +22,7 @@
 #### Presenter
 
 - [x] 초기화면
-- [ ] 노선 추가
+- [x] 노선 추가 - `displayLines`
 - [ ] 노선 삭제
 
 #### Container

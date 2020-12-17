@@ -30,4 +30,5 @@ export const LS_KEY = {
 
 export const DATA = {
   STATION: "station",
+  LINE: "line",
 };
