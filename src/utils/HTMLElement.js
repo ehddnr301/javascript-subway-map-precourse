@@ -97,3 +97,9 @@ export const createTableBody = (tdArray) => {
 
   return tbody;
 };
+
+export const createDataAttribute = (element, data, value) => {
+  element.setAttribute(`data-${data}`, value);
+
+  return element;
+};

@@ -14,3 +14,7 @@ export const LS_KEY = {
   STATION: "station",
   LINE: "line",
 };
+
+export const DATA = {
+  STATION: "station",
+};

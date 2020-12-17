@@ -1,4 +1,4 @@
-import { WORDS } from "../constants/index.js";
+import { DATA, WORDS } from "../constants/index.js";
 import { clearTableBody } from "../utils/display.js";
 import {
   createButton,
@@ -10,6 +10,7 @@ import {
   createTable,
   createTableData,
   createTableRow,
+  createDataAttribute,
 } from "../utils/HTMLElement.js";
 import stationContainer from "./stationContainer.js";
 
@@ -23,7 +24,8 @@ export const displayStations = (currentStations) => {
       "",
       "station-delete-button"
     );
-    const deleteTd = createDeleteButtonTd(deleteButton);
+    const dataButton = createDataAttribute(deleteButton, DATA.STATION, station);
+    const deleteTd = createDeleteButtonTd(dataButton);
 
     const tr = createTableRow([stationTd, deleteTd]);
     tbody.appendChild(tr);
