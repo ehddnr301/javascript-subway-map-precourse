@@ -21,6 +21,16 @@ export const WORDS = {
     LIST_COL_NAMES: ["노선이름", "상행 종점역", "하행 종점역", "설정"],
     DELETE_BUTTON: "삭제",
   },
+  SECTION: {
+    CHOICE_LINE_TITLE: "구간을 수정할 노선을 선택해주세요.",
+    MANGE_LINE: "관리",
+
+    INPUT_TITLE: "구간 등록",
+    INPUT_PLACEHOLDER: "순서",
+    ADD_BUTTON: "등록",
+
+    LIST_COL_NAMES: ["순서", "이름", "설정"],
+  },
 };
 
 export const LS_KEY = {

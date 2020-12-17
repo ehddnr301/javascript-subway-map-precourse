@@ -21,11 +21,12 @@ export const createDiv = (text, idValue = "", classValue = "") => {
   return div;
 };
 
-export const createInput = (idValue, placeholder) => {
+export const createInput = (idValue, placeholder, type = "text") => {
   const input = document.createElement("input");
 
   input.setAttribute("id", idValue);
   input.placeholder = placeholder;
+  input.type = type;
 
   return input;
 };
