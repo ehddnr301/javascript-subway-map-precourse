@@ -14,6 +14,11 @@ const stationDeleteClicked = (event) => {
   );
 
   saveLocalStorage(LS_KEY.STATION, filteredStations);
+  const isDisplayed = displayStations(filteredStations);
+
+  if (isDisplayed) {
+    activateDeleteButton();
+  }
 };
 
 const activateDeleteButton = () => {
