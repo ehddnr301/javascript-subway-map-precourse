@@ -8,3 +8,8 @@ export const WORDS = {
     LIST_COL_NAMES: ["역 이름", "설정"],
   },
 };
+
+export const LS_KEY = {
+  STATION: "station",
+  LINE: "line",
+};

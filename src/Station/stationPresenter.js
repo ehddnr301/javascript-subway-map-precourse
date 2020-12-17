@@ -7,6 +7,7 @@ import {
   createInput,
   createTable,
 } from "../utils/HTMLElement.js";
+import stationContainer from "./stationContainer.js";
 
 const initialStationUtil = (root) => {
   const inputTitle = createDiv(WORDS.STATION.INPUT_TITLE);
@@ -29,6 +30,10 @@ const stationPresenter = () => {
   const root = document.getElementById("root");
 
   const isInitialDisplayed = initialStationUtil(root);
+
+  if (isInitialDisplayed) {
+    stationContainer();
+  }
 };
 
 export default stationPresenter;
