@@ -17,3 +17,10 @@ export const deleteChild = (targetId = "root") => {
 
   target.parentNode.removeChild(target);
 };
+
+export const clearTableBody = () => {
+  const tbody = document.querySelector("tbody");
+  tbody.innerHTML = "";
+
+  return tbody;
+};

@@ -9,7 +9,7 @@
 #### Presenter
 
 - [x] 초기화면
-- [ ] 역 추가
+- [x] 역 추가 - `displayStations`
 - [ ] 역 삭제
 
 #### Container

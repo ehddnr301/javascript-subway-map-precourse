@@ -50,15 +50,50 @@ export const createHeader = (text, size = 2) => {
 export const createTable = (names) => {
   const table = document.createElement("table");
   const tr = document.createElement("tr");
+  const tHead = document.createElement("thead");
+  const tBody = document.createElement("tbody");
+
   names.forEach((name) => {
     const th = document.createElement("th");
-
     th.innerText = name;
-
     tr.appendChild(th);
   });
 
-  table.appendChild(tr);
+  tHead.appendChild(tr);
+  table.appendChild(tHead);
+  table.appendChild(tBody);
 
   return table;
+};
+
+export const createDeleteButtonTd = (button) => {
+  const td = document.createElement("td");
+
+  td.appendChild(button);
+
+  return td;
+};
+
+export const createTableData = (text) => {
+  const td = document.createElement("td");
+
+  td.innerText = text;
+
+  return td;
+};
+
+export const createTableRow = (tdArray) => {
+  const tr = document.createElement("tr");
+
+  tdArray.forEach((td) => {
+    tr.appendChild(td);
+  });
+
+  return tr;
+};
+
+export const createTableBody = (tdArray) => {
+  const tbody = document.createElement("tbody");
+
+  return tbody;
 };

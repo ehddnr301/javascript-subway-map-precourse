@@ -1,13 +1,34 @@
 import { WORDS } from "../constants/index.js";
+import { clearTableBody } from "../utils/display.js";
 import {
   createButton,
+  createDeleteButtonTd,
   createDiv,
   createDivContainer,
   createHeader,
   createInput,
   createTable,
+  createTableData,
+  createTableRow,
 } from "../utils/HTMLElement.js";
 import stationContainer from "./stationContainer.js";
+
+export const displayStations = (currentStations) => {
+  const tbody = clearTableBody();
+
+  currentStations.forEach((station) => {
+    const stationTd = createTableData(station);
+    const deleteButton = createButton(
+      WORDS.STATION.DELETE_BUTTON,
+      "",
+      "station-delete-button"
+    );
+    const deleteTd = createDeleteButtonTd(deleteButton);
+
+    const tr = createTableRow([stationTd, deleteTd]);
+    tbody.appendChild(tr);
+  });
+};
 
 const initialStationUtil = (root) => {
   const inputTitle = createDiv(WORDS.STATION.INPUT_TITLE);
