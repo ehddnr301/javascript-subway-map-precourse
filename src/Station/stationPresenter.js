@@ -1,5 +1,5 @@
 import { DATA, WORDS } from "../constants/index.js";
-import { clearTableBody } from "../utils/display.js";
+import { appendChilds, clearChilds, clearTableBody } from "../utils/display.js";
 import {
   createButton,
   createDeleteButtonTd,
@@ -34,7 +34,7 @@ export const displayStations = (currentStations) => {
   return true;
 };
 
-const initialStationUtil = (root) => {
+const initialStationUtil = () => {
   const inputTitle = createDiv(WORDS.STATION.INPUT_TITLE);
   const input = createInput(
     "station-name-input",
@@ -46,13 +46,13 @@ const initialStationUtil = (root) => {
   const elements = [inputTitle, input, button, header, table];
 
   const initialDiv = createDivContainer(elements);
-  root.appendChild(initialDiv);
+  appendChilds([initialDiv]);
 
   return true;
 };
 
 const stationPresenter = () => {
-  const root = document.getElementById("root");
+  clearChilds();
 
   const isInitialDisplayed = initialStationUtil(root);
 
