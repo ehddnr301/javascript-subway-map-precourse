@@ -30,6 +30,8 @@ export const displayStations = (currentStations) => {
     const tr = createTableRow([stationTd, deleteTd]);
     tbody.appendChild(tr);
   });
+
+  return true;
 };
 
 const initialStationUtil = (root) => {

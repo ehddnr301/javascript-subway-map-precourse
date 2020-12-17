@@ -15,7 +15,7 @@
 #### Container
 
 - [x] 역 추가 - `stationAddClicked`
-- [ ] 역 삭제
+- [x] 역 삭제 - `stationDeleteClicked`
 
 ### Line - 노선 관련
 
