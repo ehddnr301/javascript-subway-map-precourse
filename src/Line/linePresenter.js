@@ -30,7 +30,7 @@ const createLineTr = (line) => {
     "",
     "line-delete-button"
   );
-  const dataButton = createDataAttribute(deleteButton, DATA.LINE);
+  const dataButton = createDataAttribute(deleteButton, DATA.LINE, lineName);
   const deleteTd = createDeleteButtonTd(dataButton);
   const tr = createTableRow([lineTd, startStationTd, endStationTd, deleteTd]);
 

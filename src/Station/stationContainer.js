@@ -17,11 +17,11 @@ const stationDeleteClicked = (event) => {
   const isDisplayed = displayStations(filteredStations);
 
   if (isDisplayed) {
-    activateDeleteButton();
+    activateStationDeleteButton();
   }
 };
 
-const activateDeleteButton = () => {
+const activateStationDeleteButton = () => {
   const deleteStationButtons = document.getElementsByClassName(
     "station-delete-button"
   );
@@ -41,7 +41,7 @@ const stationAddClicked = () => {
   const isDisplayed = displayStations(currentStations);
 
   if (isDisplayed) {
-    activateDeleteButton();
+    activateStationDeleteButton();
   }
 };
 
@@ -54,7 +54,7 @@ const stationContainer = () => {
   const isDisplayed = displayStations(currentStations);
 
   if (isDisplayed) {
-    activateDeleteButton();
+    activateStationDeleteButton();
   }
 };
 

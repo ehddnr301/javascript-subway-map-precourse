@@ -23,12 +23,12 @@
 
 - [x] 초기화면
 - [x] 노선 추가 - `displayLines`
-- [ ] 노선 삭제
+- [x] 노선 삭제 - 기존 목록 삭제 후 필터링된 목록 표시로 구현
 
 #### Container
 
 - [x] 노선 추가 - `lineAddClicked`
-- [ ] 노선 삭제
+- [x] 노선 삭제 -
 
 ### Section - 구간 관련
 
